@@ -1,0 +1,12 @@
+@import "~normalize.css/normalize.css";
+
+.logo {
+  width: 100px;
+}
+
+.container {
+  display: flex;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+}

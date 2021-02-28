@@ -1,0 +1,25 @@
+<section class="sign-up">
+  <form [formGroup]="signUpForm" (submit)="signUp()" [hidden]="isLoading || status" novalidate>
+    <h1>Create account</h1>
+
+    <input formControlName="firstName" id="firstName" placeholder="First Name"/>
+    <div class="validation">{{getErrorMessage('firstName')}}</div>
+
+    <input formControlName="lastName" id="lastName" placeholder="Last Name"/>
+    <div class="validation">{{getErrorMessage('lastName')}}</div>
+
+
+    <input formControlName="email" id="email" placeholder="Email"/>
+    <div class="validation">{{getErrorMessage('email')}}</div>
+
+    <input formControlName="password" id="password" placeholder="Password">
+    <div class="validation">{{getErrorMessage('password')}}</div>
+    <div *ngIf="checkPasswordContainsName()" class="validation">Password can't contain First or Last Name in it</div>
+
+    <button type="submit" id="submit">Sign up</button>
+  </form>
+
+  <div class="status">{{status}}</div>
+
+  <div class="loader" [hidden]="!isLoading"></div>
+</section>

@@ -1,0 +1,94 @@
+.sign-up {
+  background: #fff;
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 5px 5px 19px -12px rgba(0, 0, 0, 0.4);
+}
+
+h1 {
+  margin: 0 20px 20px;
+  font-weight: 900;
+  font-size: 50px;
+  color: #212121;
+}
+
+input {
+  display: inline-block;
+  width: 100%;
+  margin-top: 15px;
+  padding: 13px 15px;
+  color: #212121;
+  font-size: 16px;
+  font-weight: bold;
+  border: 1px #ddd solid;
+  border-radius: 15px;
+  box-shadow: 0 0 3px 1px #eee;
+
+  /* Graceful degradation for Internet Explorer */
+  caret-color: #4796ff;
+  caret-shape: block;
+}
+
+input:focus {
+  outline: none;
+  border-color: #eadeed;
+  box-shadow: 0 0 3px 2px #eadeed;
+}
+
+label {
+  display: block;
+  margin: 15px 0 5px;
+}
+
+button {
+  width: 100%;
+  margin-top: 18px;
+  padding: 13px;
+  font-size: 20px;
+  background: #4796ff;
+  color: #fff;
+  border: 0;
+  border-radius: 16px;
+}
+
+button:hover {
+  cursor: pointer;
+  background: #85b9ff;
+  transition: background 100ms linear;
+}
+
+.validation {
+  color: red;
+  margin: 0 10px;
+}
+
+.loader {
+  width: 100px;
+  height: 100px;
+  margin: 0 auto;
+  border: 15px solid #eee;
+  border-top: 15px solid #4796ff;
+  border-radius: 50%;
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Mobile UI improvements */
+@media only screen and (max-width: 768px) {
+  .sign-up {
+    margin: 0 15px;
+  }
+
+  h1 {
+    font-size: 38px;
+    margin: 10px 0;
+  }
+}
